@@ -1,0 +1,87 @@
+
+html,
+body {
+  font-family: var(--font-family);
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  background-color: #eff3f5;
+}
+
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+button {
+  font-family: var(--font-family);
+  background-color: transparent;
+  border: none;
+}
+
+.title-h1 {
+  @include typography.h1;
+}
+
+.title-h2 {
+  @include typography.h2;
+  margin-bottom: 40px;
+}
+
+.title-h3 {
+  @include typography.h3;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #0a0f13;
+  margin: 0 auto;
+  cursor: pointer;
+  & svg {
+    margin-left: 12px;
+  }
+  &-download-more {
+    margin-top: 128px;
+  }
+  &-dark {
+    border-radius: 100px;
+    padding: 13px 20px;
+    width: 223px;
+    height: 46px;
+    margin: 0;
+    border: none;
+    background: #0a0f13;
+    color: #eff3f5;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%
+}
+
+.container {
+  @include mixins.wrap;
+}
+
+svg {
+  flex-shrink: 0
+}

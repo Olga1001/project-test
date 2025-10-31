@@ -1,0 +1,146 @@
+<% var data={ title: "Главная страница | Проект" }; %>
+
+  <%= _.template(require('./../includes/header.html').default)(data) %>
+
+    <main>
+      <div class="slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="img/bg.png" alt="bg">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/bg-1.png" alt="bg-1">
+            </div>
+            <div class="swiper-slide">
+              <img src="img/bg.png" alt="bg">
+            </div>
+          </div>
+
+          <div class="container swiper-container">
+            <h1 class="title-h1">Test slider</h1>
+            <div class="swiper-buttons">
+              <button type="button" class="swiper-button swiper-button-prev">
+                <svg class="icon icon-arrow-left" stroke="#EFF3F5" width="40" height="24">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <button type="button" class="swiper-button swiper-button-next">
+                <svg class="icon icon-arrow-right" stroke="#EFF3F5" width="40" height="24">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="swiper-footer">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-progress-bar">
+                <div class="swiper-progress"></div>
+              </div>
+              <div class="swiper-flower" id="flower">
+                <svg class="icon icon-flower" fill="#0A0F13" width="14" height="14">
+                  <use xlink:href="img/sprite/sprite.svg#flower"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <section class="projects">
+          <h2 class="title-h2">Збудовані обʼєкти</h2>
+          <nav class="projects-filters">
+            <ul>
+              <li class="active">Усі</li>
+            </ul>
+          </nav>
+          <div class="projects-row"></div>
+          <button class="btn btn-download-more">Завантажити ще
+            <svg class="icon icon-arrow-down" fill="#0A0F13" width="8" height="12">
+              <use xlink:href="img/sprite/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
+        </section>
+
+        <section class="contacts">
+          <div class="row">
+            <div class="col-6">
+              <div class="decor">
+                <img src="img/scrollbar-drag.svg" alt="icons" class="decor-icon">
+                <div class="decor-line"></div>
+                <p class="decor-text">Smarto</p>
+              </div>
+              <h2 class="title-h1">Контакти</h2>
+              <div class="row">
+                <div class="col-6">
+                  <h3 class="title-h3">Головний офіс:</h3>
+                  <a href="mailto:SmartorangeTest@gmail.com">SmartorangeTest@gmail.com</a>
+                  <a href="#" class="btn btn-dark">Відкрити на Google maps</a>
+                </div>
+                <div class="col-6">
+                  <h3 class="title-h3">Наші соцмережі:</h3>
+                  <ul class="contacts-socials">
+                    <li>
+                      <a href="#" class="contacts-social">
+                        <svg class="icon icon-instagram" fill="#eff3f5" width="12" height="12">
+                          <use xlink:href="img/sprite/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="contacts-social">
+                        <svg class="icon icon-youtube" fill="#eff3f5" width="12" height="12">
+                          <use xlink:href="img/sprite/sprite.svg#youtube"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="contacts-social">
+                        <svg class="icon icon-facebook" fill="#eff3f5" width="12" height="12">
+                          <use xlink:href="img/sprite/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="contacts-social">
+                        <svg class="icon icon-tiktok" fill="#eff3f5" width="12" height="12">
+                          <use xlink:href="img/sprite/sprite.svg#tiktok"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <h3 class="title-h3">Телефони відділів:</h3>
+                  <ul class="phone-list">
+                    <li>
+                      <svg class="icon icon-phone" fill="#0A0F13" width="14" height="14">
+                        <use xlink:href="img/sprite/sprite.svg#phone"></use>
+                      </svg>
+                      <a href="tel:(044) 444-44-44">(044) 444-44-44</a>
+                      <p>( Юридичний відділ )</p>
+                    </li>
+                    <li>
+                      <svg class="icon icon-flower" fill="#0A0F13" width="14" height="14">
+                        <use xlink:href="img/sprite/sprite.svg#phone"></use>
+                      </svg>
+                      <a href="tel:(044) 444-44-44">(044) 444-44-44</a>
+                      <p>( Бухгалтерія )</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <h3 class="title-h3">Email:</h3>
+                  <a href="mailto:office@smarto.ua">office@smarto.ua</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <%= _.template(require('./../includes/footer.html').default)() %>

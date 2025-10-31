@@ -1,0 +1,20 @@
+.header {
+  @include mixins.wrap;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  &__logo {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 90%;
+    letter-spacing: -0.04em;
+    color:  var(--text-dark);
+    text-align: center;
+  }
+}

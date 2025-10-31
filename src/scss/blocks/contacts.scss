@@ -1,0 +1,65 @@
+.decor {
+    display: flex;
+    align-items: center;
+    &-line {
+        height: 1px;
+        width: 100%;
+        margin: 0 20px;
+        background: rgba(10, 15, 19, 0.2);
+    }
+    &-text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: uppercase;
+    }
+}
+
+.contacts {
+    padding: 100px 0;
+    & .title-h1 {
+        color: #0a0f13;
+        text-align: left;
+        margin-top: 25px;
+    }
+    & .title-h3 {
+        margin-top: 83px;
+        margin-bottom: 23px;
+    }
+    & .btn {
+        margin-top: 41px;
+    }
+    &-socials {
+        display: flex;
+    }
+    &-social {
+        border-radius: 100px;
+        padding: 16px;
+        width: 46px;
+        height: 46px;
+        background: #0a0f13;
+        margin-right: 4px;
+        display: flex;
+        flex-shrink: 0;
+        & svg {
+            margin: auto;
+        }
+    }
+}
+
+.phone-list {
+    & li {
+        margin-bottom: 15px;
+        display: inline-flex;
+        & a {
+            padding: 0 12px;
+        }
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #737373;
+        }
+    }
+}

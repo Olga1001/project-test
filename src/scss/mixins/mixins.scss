@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "sass:meta";
+
+$breakpoints: (mobile: 428,
+  tablet: 1024,
+  desktop: 1440);
+
+@mixin breakpoint($point, $type: max) {
+  $delta: 0;
+
+  @if $type==max {
+    $delta: 0.1;
+  }
+
+  @if meta.type-of($point)==number {
+    @media (#{$type}-width: $point - $delta + px) {
+      @content;
+    }
+  }
+
+  @else {
+    $breakpoint: map.get($breakpoints, #{$point});
+    $breakpointValue: $breakpoint - $delta (+px);
+
+    @media (#{$type}-width: $breakpointValue) {
+      @content;
+    }
+  }
+}
+
+@mixin wrap {
+  max-width: 1824px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
+}

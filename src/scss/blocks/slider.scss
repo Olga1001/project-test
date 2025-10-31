@@ -1,0 +1,90 @@
+
+.swiper {
+  width: 100%;
+  position: relative;
+  & .title-h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  &-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  & img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    max-height: 468px;
+    min-height: 300px;
+  }
+  &-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: -webkit-fill-available;
+  }
+  &-button {
+    padding: 12px;
+    width: fit-content;
+    height: auto;
+  }
+  &-button-next {
+    left: auto!important;
+    right: 0!important;
+    transform: none;
+  }
+  &-footer {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    padding: 0 12px;
+  }
+  &-pagination {
+    position: static;
+    display: flex;
+    background: url("../img/scrollbar-drag.svg") no-repeat center / contain;
+    &-bullet {
+      margin: 0 7px 0 0!important;
+      background-color: #0a0f13;
+      width: 9px;
+      height: 9px;
+      flex-shrink: 0;
+      &-active {
+        transform: scale(1.2);
+      }
+    }
+  }
+  &-progress-bar {
+    height: 1px;
+    width: 100%;
+    background: rgba(10, 15, 19, 0.2);
+  }
+  &-progress {
+    height: 100%;
+    width: calc(var(--progress) * 100%);
+    background: #0a0f13;
+    transition: width linear;
+  }
+  &-flower {
+    margin-left: 10px;
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  width: fit-content;
+  width: 41px;
+}

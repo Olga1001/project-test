@@ -1,0 +1,11 @@
+// global
+@use "global/fonts.scss";
+@use "global/reset.scss";
+@use "global/variables.scss";
+
+// blocks
+@import "blocks/common.scss";
+@import "blocks/header.scss";
+@import "blocks/slider.scss";
+@import "blocks/projects.scss";
+@import "blocks/contacts.scss";
